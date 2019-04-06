@@ -93,7 +93,7 @@ func loadWebConfig(c webConfig) (static, theme http.Handler, templates *template
 		c.dir = "./web"
 	}
 	if c.logoURL == "" {
-		c.logoURL = join(c.issuerURL, "theme/logo.png")
+		c.logoURL = join(c.issuerURL, "theme/logo.svg")
 	}
 
 	if err := dirExists(c.dir); err != nil {

@@ -28,6 +28,7 @@ import (
 	"github.com/dexidp/dex/connector/mock"
 	"github.com/dexidp/dex/connector/oidc"
 	"github.com/dexidp/dex/connector/saml"
+	"github.com/dexidp/dex/connector/wesense"
 	"github.com/dexidp/dex/pkg/log"
 	"github.com/dexidp/dex/storage"
 	"github.com/felixge/httpsnoop"
@@ -182,6 +183,8 @@ func newServer(ctx context.Context, c Config, rotationStrategy rotationStrategy)
 		issuer:    c.Web.Issuer,
 		theme:     c.Web.Theme,
 	}
+
+	fmt.Print(web)
 
 	static, theme, tmpls, err := loadWebConfig(web)
 	if err != nil {
@@ -448,6 +451,7 @@ var ConnectorsConfig = map[string]func() ConnectorConfig{
 	"linkedin":        func() ConnectorConfig { return new(linkedin.Config) },
 	"microsoft":       func() ConnectorConfig { return new(microsoft.Config) },
 	"bitbucket-cloud": func() ConnectorConfig { return new(bitbucketcloud.Config) },
+	"wesense":         func() ConnectorConfig { return new(wesense.Config) },
 	// Keep around for backwards compatibility.
 	"samlExperimental": func() ConnectorConfig { return new(saml.Config) },
 }

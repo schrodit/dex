@@ -19,6 +19,9 @@ LD_FLAGS="-w -X $(REPO_PATH)/version.Version=$(VERSION)"
 
 build: bin/dex bin/example-app bin/grpc-client
 
+run/dex:
+	@go run -v -ldflags $(LD_FLAGS) $(REPO_PATH)/cmd/dex serve config.yaml
+
 bin/dex:
 	@go install -v -ldflags $(LD_FLAGS) $(REPO_PATH)/cmd/dex
 

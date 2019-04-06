@@ -1,0 +1,126 @@
+.theme-body {
+  /* background-color: #343a40; */
+  color: #333;
+  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+}
+
+.theme-navbar {
+  background-color: #ffffff;
+  /* box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); */
+  color: #333;
+  font-size: 13px;
+  font-weight: 100;
+  overflow: hidden;
+  padding: 0 10px;
+
+  margin-top: 3em;
+}
+
+.theme-navbar__logo-wrap {
+  display: inline-block;
+  height: 100%;
+  overflow: hidden;
+  padding: 10px 15px;
+  width: 100%;
+}
+
+.theme-navbar__logo {
+  height: 100%;
+  width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.theme-heading {
+  display: none;
+  font-size: 20px;
+  font-weight: 500;
+  padding-bottom: 10px;
+  margin-top: 0;
+}
+
+.dex-container {
+  margin-top: 0 !important;
+}
+
+.theme-panel {
+  background-color: #ffffff;
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); */
+  padding: 30px;
+}
+
+.theme-btn-provider {
+  background-color: #fff;
+  color: #333;
+  min-width: 250px;
+}
+
+.theme-btn-provider:hover {
+  color: #999;
+}
+
+.theme-btn--primary {
+  border-radius: 50px;
+  background: rgba(0,0,0,0);
+  color: rgba(0,0,0,.8);
+  border: 1px solid rgba(0,0,0,.6);
+  font-size: 18px;
+  line-height: 40px;
+  padding: 0 25px;
+  margin: 0;
+}
+
+.theme-btn--primary:hover {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.theme-btn--success {
+  background-color: #2FC98E;
+  color: #fff;
+  width: 250px;
+}
+
+.theme-btn--success:hover {
+  background-color: #49E3A8;
+}
+
+.theme-form-row {
+  display: block;
+  margin: 20px auto;
+}
+
+.theme-form-input {
+  background: 0 0;
+  border: none;
+  box-shadow: none;
+  border-bottom: 1px solid rgba(0,0,0,.6);
+  color: #343a40;
+  border-radius: 0;
+
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+}
+
+.theme-form-input:focus,
+.theme-form-input:active {
+  outline: none;
+  border-color: #66AFE9;
+}
+
+.theme-form-label {
+  visibility: hidden;
+  width: 250px;
+  margin: 4px auto;
+  text-align: left;
+  position: relative;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.dex-container {
+  margin: 60px auto;
+}
