@@ -1,9 +1,19 @@
 package wesense
 
 import (
+	"encoding/json"
 	"net/url"
 
 	"github.com/dexidp/dex/pkg/log"
+)
+
+// Status is the type definition for IStatus
+type Status string
+
+// IStatus types
+const (
+	OkStatus    Status = "OK"
+	ErrorStatus Status = "ERROR"
 )
 
 // Config holds the configuration parameters for a connector which returns an
@@ -18,10 +28,18 @@ type wesenseConnector struct {
 	logger log.Logger
 }
 
-type WeSenseIdentity struct {
-	ID      string `json:"_id"`
-	Name    string `json:"name"`
-	Surname string `json:"surename"`
-	Email   string `json:"email"`
-	Token   string `json:"token"`
+// IStatus represents the WeSense status
+type IStatus struct {
+	Code Status          `json:"code"`
+	Data json.RawMessage `json:"data"`
+}
+
+// Identity represents the Identity that comes from the wesene account
+type Identity struct {
+	ID      string   `json:"_id"`
+	Name    string   `json:"name"`
+	Surname string   `json:"surename"`
+	Email   string   `json:"email"`
+	Token   string   `json:"token"`
+	Groups  []string `json:"groups"`
 }
