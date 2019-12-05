@@ -36,7 +36,7 @@ type IStatus struct {
 
 // Identity represents the Identity that comes from the wesene account
 type Identity struct {
-	ID      string   `json:"_id"`
+	ID      string   `json:"username"`
 	Name    string   `json:"name"`
 	Surname string   `json:"surename"`
 	Email   string   `json:"email"`
